@@ -61,25 +61,58 @@ p.lead {
   font-size: 1.5rem;
 }
 
-.social-icons a {
-  display: inline-block;
-  height: 3.5rem;
-  width: 3.5rem;
-  background-color: #495057;
-  color: #fff !important;
-  border-radius: 100%;
+.social-icons{
+  width: 260px;
+  height: 70px;
+  background: #ffffff;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+.social-icons:hover{
+  transform: scale(1.1);
+}
+
+.social-icons:hover a{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.social-icons span{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #495057;
+  color: #f1f1f1;
   text-align: center;
-  font-size: 1.5rem;
-  line-height: 3.5rem;
-  margin-right: 1rem;
+  letter-spacing: 1px;
+  line-height: 70px;
+  z-index: 999;
+  transition: .6s linear;
+  border-radius: 40px;
+  font-size: 22px;
+  font-family: "Gugi";
 }
 
-.social-icons a:last-child {
-  margin-right: 0;
+.social-icons:hover span {
+  transform: translateX(-100%);
+  transition-delay: .3s;
 }
 
-.social-icons a:hover {
-  background-color: #836fff;
+.social-icons a{
+  flex: 1;
+  font-size: 26px;
+  color: #2d3436;
+  text-align: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: .10s linear;
 }
 
 .dev-icons {
